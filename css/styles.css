@@ -133,8 +133,13 @@
   height: 100px;
 }
 
-.grillas .header1 .marcas .contenedor img {
+.grillas .header1 .marcas .contenedor .marca {
   height: 60px;
+}
+
+.grillas .header1 .marcas .contenedor .marca:hover {
+  transform: scale(1.1);
+  transition: 1s;
 }
 
 .grillas .header2 {
