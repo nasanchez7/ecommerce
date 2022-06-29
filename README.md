@@ -1,6 +1,6 @@
 ### Ecommerce
 
-- [Ecommerce](https://nasanchez7.github.io/proyecto-films/index.html "MyFilms") es un proyecto creado como proyecto final para el curso de JavaScript de Coder House, actualmente sigue en desarrollo.
+- [Ecommerce](https://nasanchez7.github.io/ecommerce/ "MyFilms") es un proyecto creado como proyecto final para el curso de JavaScript de Coder House, actualmente sigue en desarrollo.
 
 ## Objetivo
 
