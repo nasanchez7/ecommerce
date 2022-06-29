@@ -1,0 +1,10 @@
+.titulo{
+    font-family: map-get($fuenteTitulos , fuente);
+    font-weight: map-get($fuenteTitulos , grosor);
+    /*line-height: map-get($fuenteTitulos , grosor2);*/
+}
+.subtitulo{
+    font-family: map-get($fuenteSubtitulos , fuente);
+    font-weight: map-get($fuenteSubtitulos , grosor);
+    /*line-height: map-get($fuenteSubtitulos , grosor2);*/
+}

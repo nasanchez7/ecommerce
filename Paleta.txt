@@ -1,0 +1,4 @@
+1er Blanco: #FFFFFF
+2do Blanco + gris : #F8FAFB
+Color secundario: #FD794F
+Color letras(negro): #131313
