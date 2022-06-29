@@ -27,7 +27,7 @@
                     text-decoration: none;
                     color: $color-letras;
                     font-family: "fuente1";
-                    font-size: 15px;
+                    font-size: 13px;
                 }
             }
         }
@@ -50,6 +50,7 @@
     }
     .header1{
         display: flex;
+        flex-direction: column;
         width: 100%;
         height: 600px;
         grid-area: "nav1";
@@ -91,11 +92,30 @@
                 }
             }
         }
-        img{
+        .imgProducto{
             position: absolute;
             left: 450px;
             height: 430px;
             transform: rotate(-4.44deg);
+        }
+        .marcas{
+            width: 100%;
+            margin-top: 70px;
+            display: flex;
+            justify-content: center;
+            .contenedor{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-primarioDos;
+                width: 650px;
+                border-radius: 30px;
+                height: 100px;
+                img{
+                    height: 60px;
+                    
+                }
+            }
         }
     }
     .header2{
@@ -103,4 +123,6 @@
         grid-area: "nav2";
     }
 }
+
+
 
