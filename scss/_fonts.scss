@@ -1,4 +1,12 @@
-$fuente-nav: 'Catamaran';
+@font-face {
+    font-family: "fuente1";
+    src: url(../assets/fonts/sf-compact-display-medium.otf);
+}
+@font-face {
+    font-family: "fuente2";
+    src: url(../assets/fonts/sf-compact-display-thin.otf);
+}
+
 $fuente: 'Century Gothic';
 
 $fuenteTitulos:(

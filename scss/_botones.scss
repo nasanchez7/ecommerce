@@ -1,0 +1,8 @@
+.boton1{
+    padding: 10px;
+    background-color: $color-secundario;
+    border: none;
+    color: $color-primario;
+    border-radius: 10px;
+    @extend .titulo;
+}

@@ -1,0 +1,6 @@
+.grillas{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 589px;
+    grid-template-areas: "nav1 nav2";
+}
