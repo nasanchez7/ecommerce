@@ -43,7 +43,7 @@
   text-decoration: none;
   color: #131313;
   font-family: "fuente1";
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .grillas nav .logo img {
@@ -110,7 +110,6 @@
 }
 
 .grillas .header1 .imgProducto {
-  width: 100%;
   position: absolute;
   left: 450px;
   height: 430px;
