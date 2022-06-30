@@ -110,10 +110,21 @@
 }
 
 .grillas .header1 .imgProducto {
+  width: 100%;
   position: absolute;
   left: 450px;
   height: 430px;
   transform: rotate(-4.44deg);
+}
+
+.grillas .header1 .imgProducto img {
+  height: 400px;
+}
+
+.grillas .header1 .imgProducto:hover {
+  transform: rotate(0deg);
+  transform: scale(1.1);
+  transition: 3s;
 }
 
 .grillas .header1 .marcas {
@@ -134,7 +145,8 @@
 }
 
 .grillas .header1 .marcas .contenedor .marca {
-  height: 60px;
+  height: 45px;
+  margin: 10px;
 }
 
 .grillas .header1 .marcas .contenedor .marca:hover {

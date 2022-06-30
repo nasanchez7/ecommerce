@@ -93,10 +93,19 @@
             }
         }
         .imgProducto{
+            width: 100%;
+            img{
+                height: 400px;
+            }
             position: absolute;
             left: 450px;
             height: 430px;
             transform: rotate(-4.44deg);
+        }
+        .imgProducto:hover{
+            transform: rotate(0deg);
+            transform: scale(1.1);
+            transition: 3s;
         }
         .marcas{
             width: 100%;
@@ -112,7 +121,8 @@
                 border-radius: 30px;
                 height: 100px;
                 .marca{
-                    height: 60px;
+                    height: 45px;
+                    margin: 10px;
                 }
                 .marca:hover{
                     transform: scale(1.1);
