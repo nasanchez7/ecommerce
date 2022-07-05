@@ -8,7 +8,7 @@
   src: url(../assets/fonts/sf-compact-display-thin.otf);
 }
 
-.titulo, .grillas .header1 .descripcionProducto .tituloProducto h2, .grillas .header1 .descripcionProducto .precio, .grillas .header1 .descripcionProducto .botones a, .boton1 {
+.titulo, .grillas .header1 .descripcionProducto .tituloProducto h2, .grillas .header1 .descripcionProducto .precio, .grillas .header1 .descripcionProducto .botones a, .grillas .header2 .tituloProducto h2, .boton1 {
   font-family: "Century Gothic";
   font-weight: 700;
   /*line-height: map-get($fuenteTitulos , grosor2);*/
@@ -156,6 +156,18 @@
 .grillas .header2 {
   background-color: #FD794F;
   grid-area: "nav2";
+}
+
+.grillas .header2 .tituloProducto {
+  animation-duration: 4s;
+}
+
+.grillas .header2 .tituloProducto h2 {
+  line-height: 83.5%;
+  font-size: 100px;
+  color: #13131318;
+  margin-left: 100px;
+  animation-duration: 5s;
 }
 
 .grillas {

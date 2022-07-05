@@ -134,6 +134,17 @@
     .header2{
         background-color: $color-secundario;
         grid-area: "nav2";
+        .tituloProducto{
+            animation-duration: 4s;
+            h2{
+                line-height: 83.5%;
+                font-size: 100px;
+                color: #13131318;
+                @extend .titulo;
+                margin-left: 100px;
+                animation-duration: 5s;
+            }
+        }
     }
 }
 
