@@ -5,4 +5,8 @@
     color: $color-primario;
     border-radius: 10px;
     @extend .titulo;
+    a{
+        text-decoration: none;
+        color: $color-letras;
+    }
 }
