@@ -8,12 +8,12 @@
   src: url(../assets/fonts/sf-compact-display-thin.otf);
 }
 
-.titulo, .grillas .header1 .descripcionProducto .tituloProducto h2, .grillas .header1 .descripcionProducto .precio, .grillas .header1 .descripcionProducto a, .grillas .header2 .tituloProducto h2, .boton1, .tarjeta h3, .tarjeta a {
+.titulo, .grillas .header1 .descripcionProducto .tituloProducto h2, .grillas .header1 .descripcionProducto .precio, .grillas .header1 .descripcionProducto a, .grillas .header2 .tituloProducto h2, .boton1, .tarjeta h3, .tarjeta a, footer .acerca-redes .acercaDe h3, footer .acerca-redes .redes h3, footer .ubi-derechos .localizacion h3 {
   font-family: "Century Gothic";
   font-weight: 700;
 }
 
-.subtitulo, .grillas .header1 .descripcionProducto h4, .grillas .header1 .descripcionProducto h3, .tarjeta h4 {
+.subtitulo, .grillas .header1 .descripcionProducto h4, .grillas .header1 .descripcionProducto h3, .tarjeta h4, footer .acerca-redes .acercaDe a, footer .ubi-derechos h3 {
   font-family: "Century Gothic";
   font-weight: 400;
 }
@@ -250,6 +250,70 @@
 .tarjeta a {
   color: #131313;
   font-size: 10px;
+}
+
+footer {
+  background-color: #131313;
+  padding: 50px;
+  margin-top: 50px;
+}
+
+footer .acerca-redes {
+  display: flex;
+}
+
+footer .acerca-redes .acercaDe {
+  padding: 10px;
+}
+
+footer .acerca-redes .acercaDe .acercaDe-info {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .acerca-redes .acercaDe h3 {
+  color: #FFFFFF;
+}
+
+footer .acerca-redes .acercaDe a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+footer .acerca-redes .redes {
+  padding: 10px;
+}
+
+footer .acerca-redes .redes h3 {
+  color: #FFFFFF;
+}
+
+footer .acerca-redes .redes i {
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+footer .ubi-derechos {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+footer .ubi-derechos .localizacion {
+  display: flex;
+}
+
+footer .ubi-derechos .localizacion i {
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+footer .ubi-derechos .localizacion h3 {
+  color: #FFFFFF;
+}
+
+footer .ubi-derechos h3 {
+  color: #FFFFFF;
 }
 
 * {
