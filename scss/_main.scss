@@ -21,7 +21,6 @@
         ul{
             display: flex;
             grid-area: "nav1";
-            justify-content: space-around;
             width: 100%;
             a{
                 text-decoration: none;
@@ -30,11 +29,13 @@
                     text-decoration: none;
                     color: $color-letras;
                     font-family: "fuente1";
-                    font-size: 11px;
+                    font-size: 14px;
+                    margin-left: 50px;
                 }
             }
         }
         .logo{
+            animation-duration: 2s;
             img{
                 margin-left: 20px;
             }
@@ -47,8 +48,26 @@
         background-color: $color-secundario;
         grid-area: "nav2";
         i{
-            font-size: 30px;
+            font-size: 25px;
             margin-right: 20px;
+            color: $color-letras;
+        }
+        .busqueda{
+            margin-right: 20px;
+            background-color: $color-primarioDos;
+            border: none;
+            height: 30px;
+            border-radius: 30px;
+            color: $color-letras;
+        }
+        input{
+            border: none;
+            font-family: "fuente2";
+            padding-left: 25px;
+        }
+        input:focus {
+            outline-color: $color-secundario;
+            padding: 20px;
         }
     }
     .header1{
@@ -60,6 +79,7 @@
         .descripcionProducto{
             margin-left: 30px;
             margin-top: 80px;
+            animation-duration: 1.5s;
             h4{
                 color: $color-secundario;
                 margin-bottom: 5px;
@@ -97,6 +117,7 @@
         .imgProducto{
             img{
                 height: 400px;
+                animation-duration: 1.5s;
             }
             position: absolute;
             left: 450px;
@@ -113,6 +134,7 @@
             margin-top: 70px;
             display: flex;
             justify-content: center;
+            animation-duration: 2s;
             .contenedor{
                 display: flex;
                 justify-content: center;
