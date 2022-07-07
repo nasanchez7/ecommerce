@@ -45,8 +45,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        background-color: $color-secundario;
-        grid-area: "nav2";
+        //background-color: $color-secundario;
         i{
             font-size: 25px;
             margin-right: 20px;
@@ -74,7 +73,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 600px;
+        height: 700px;
         grid-area: "nav1";
         .descripcionProducto{
             margin-left: 30px;
@@ -120,9 +119,10 @@
                 animation-duration: 1.5s;
             }
             position: absolute;
-            left: 450px;
+            left: 500px;
             height: 430px;
             transform: rotate(-4.44deg);
+            margin-top: 50px;
         }
         .imgProducto:hover{
             transform: rotate(0deg);
@@ -156,7 +156,7 @@
         }
     }
     .header2{
-        background-color: $color-secundario;
+        background-image: url(../assets/img/header2.jpg);
         grid-area: "nav2";
         .tituloProducto{
             animation-duration: 4s;
