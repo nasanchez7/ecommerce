@@ -27,7 +27,6 @@
                 li{
                     list-style: none;
                     text-decoration: none;
-                    color: $color-letras;
                     font-family: "fuente1";
                     font-size: 14px;
                     margin-left: 50px;
@@ -159,13 +158,17 @@
         grid-area: "nav2";
         .tituloProducto{
             animation-duration: 4s;
-            margin-top: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            height: 80%;
+            justify-content: center;
+            margin-right: 20px;
             h2{
                 line-height: 83.5%;
                 font-size: 100px;
                 color: #13131318;
                 @extend .titulo;
-                margin-left: 120px;
                 animation-duration: 5s;
             }
         }

@@ -38,7 +38,6 @@
 .grillas nav ul a li {
   list-style: none;
   text-decoration: none;
-  color: #131313;
   font-family: "fuente1";
   font-size: 14px;
   margin-left: 50px;
@@ -184,14 +183,18 @@
 
 .grillas .header2 .tituloProducto {
   animation-duration: 4s;
-  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 80%;
+  justify-content: center;
+  margin-right: 20px;
 }
 
 .grillas .header2 .tituloProducto h2 {
   line-height: 83.5%;
   font-size: 100px;
   color: #13131318;
-  margin-left: 120px;
   animation-duration: 5s;
 }
 
@@ -257,6 +260,13 @@
 .boton1 a {
   text-decoration: none;
   color: #131313;
+}
+
+.botonActivo {
+  color: #FFFFFF;
+  background-color: #FD794F;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .tarjeta {

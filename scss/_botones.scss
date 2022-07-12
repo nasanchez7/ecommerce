@@ -10,3 +10,9 @@
         color: $color-letras;
     }
 }
+.botonActivo{
+    color: $color-primario;
+    background-color: $color-secundario;
+    padding: 10px;
+    border-radius: 20px;
+}
