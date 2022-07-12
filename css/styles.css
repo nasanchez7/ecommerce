@@ -61,7 +61,7 @@
 .grillas .buscadorCarrito i {
   font-size: 25px;
   margin-right: 20px;
-  color: #131313;
+  color: #FFFFFF;
 }
 
 .grillas .buscadorCarrito .busqueda {
@@ -178,20 +178,25 @@
 }
 
 .grillas .header2 {
-  background-image: url(../assets/img/header2.jpg);
+  background-color: #FD794F;
   grid-area: "nav2";
 }
 
 .grillas .header2 .tituloProducto {
   animation-duration: 4s;
+  margin-top: 90px;
 }
 
 .grillas .header2 .tituloProducto h2 {
   line-height: 83.5%;
   font-size: 100px;
   color: #13131318;
-  margin-left: 100px;
+  margin-left: 120px;
   animation-duration: 5s;
+}
+
+.grillas .header2 .buscadorCarrito {
+  margin-top: 15px;
 }
 
 .info {

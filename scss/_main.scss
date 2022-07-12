@@ -45,11 +45,10 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        //background-color: $color-secundario;
         i{
             font-size: 25px;
             margin-right: 20px;
-            color: $color-letras;
+            color: $color-primario;
         }
         .busqueda{
             margin-right: 20px;
@@ -156,18 +155,22 @@
         }
     }
     .header2{
-        background-image: url(../assets/img/header2.jpg);
+        background-color: $color-secundario;
         grid-area: "nav2";
         .tituloProducto{
             animation-duration: 4s;
+            margin-top: 90px;
             h2{
                 line-height: 83.5%;
                 font-size: 100px;
                 color: #13131318;
                 @extend .titulo;
-                margin-left: 100px;
+                margin-left: 120px;
                 animation-duration: 5s;
             }
+        }
+        .buscadorCarrito{
+            margin-top: 15px;
         }
     }
 }
