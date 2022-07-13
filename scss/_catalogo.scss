@@ -30,27 +30,35 @@ nav{
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        i{
+        .buscador{
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            background-color: $color-primarioDos;
+            width: 150px;
+            height: 40px;
+            border-radius: 20px;
+            justify-content: center;
+            input{
+                border: none;
+                background-color: $color-primarioDos;
+                width: 100px;
+                padding: 5px; 
+            }
+            input:focus{
+                outline: none;
+                background-color: $color-primarioDos;
+            }
+            .iconoBuscador{
+                margin-right: 10px;
+                font-size: 25px;
+                color: $color-secundario;
+            }
+        }
+        .iconoCarrito-catalogo{
             font-size: 25px;
             margin-right: 20px;
             color: $color-letras;
-        }
-        .busqueda{
-            margin-right: 20px;
-            background-color: $color-primarioDos;
-            border: none;
-            height: 30px;
-            border-radius: 30px;
-            color: $color-letras;
-        }
-        input{
-            border: none;
-            font-family: "fuente2";
-            padding-left: 25px;
-        }
-        input:focus {
-            outline-color: $color-secundario;
-            padding: 20px;
         }
     }
 }

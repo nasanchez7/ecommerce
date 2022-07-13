@@ -1,0 +1,88 @@
+/* Mobile */
+
+@media screen and (max-width: 480px){
+
+    .navMobile{
+        display: unset;
+        .buscadorCarrito{
+            justify-content: space-around;
+            margin-top: 10px;
+            .buscador{
+                width: 150px;
+                margin-right: 0px;
+            }
+            a{
+                color: $color-letras;
+            }
+            .iconoCarrito{
+                font-size: 30px;
+                color: $color-letras;
+            }
+        }
+        .logo{
+            img{
+                margin-left: 0px;
+            }
+        }
+    }
+
+.navDesktop{
+    display: none;
+}
+
+    .grillas{
+        display: flex!important;
+        .navDesktop{
+            display: none;
+        }
+        .imgProducto{
+            display: none;
+        }
+        .header1{
+            justify-content: center;
+            .descripcionProducto{
+                margin-left: 10px;
+                .tituloProducto{
+                    h2{
+                        font-size: 100px!important;
+
+                    }
+                }
+            }
+        }
+        .header2{
+            display: none;
+            .buscadorCarrito{
+                display: none;
+            }
+        }
+        .header1{
+            .marcas{
+                .contenedor{
+                    width: 100% !important;
+                    height: 200px!important;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    .destacados{
+        .tarjetas{
+            flex-direction: column;
+            align-items: center;
+            .tarjeta{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.info{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.productos{
+    grid-template-columns: 1fr;
+}
