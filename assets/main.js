@@ -1,227 +1,186 @@
-/*
-//Funciones y variables
+//Array de carrito
 
-let productos;
+const productosCarrito = [];
+
+//Funciones Local Storage
+
+function guardarProductos(productos){
+    localStorage.setItem("productos", JSON.stringify(productos));
+}
+function obtenerProductos(){
+    return JSON.parse(localStorage.getItem("productos")) || [];
+}
+function guardarProductosCarrito(carrito){
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+function obtenerProductosCarrito(){
+    return JSON.parse(localStorage.getItem("carrito")) || [];
+}
+
+guardarProductosCarrito(productosCarrito);
+
+//Compra total
+
 let compraTotal = 0;
 
-//Clases y objetos
-
+//Constructor de productos
 class indumentaria{
-        constructor(tipo, nombre, precio){
-            this.tipo = tipo;
-            this.nombre = nombre;
-            this.precio = parseInt(precio);
-            this.comprado = function(){alert("Agregaste al carrito: " + this.nombre + " por $" + this.precio)};
+
+    constructor(id, marca, nombre, precio, imagen){
+        this.id = parseInt(id);
+        this.marca = marca;
+        this.nombre = nombre;
+        this.precio = parseInt(precio);
+        this.imagen = imagen;
+    }
+
+}
+
+//Productos
+const remeraAirMax = new indumentaria(1, "Nike", "Remera Air Max", 4500, "../assets/img/remera-airmax.png");
+const camperaNorthFace = new indumentaria(2, "North Face", "Campera North Face", 15000, "../assets/img/campera-northface.png");
+const zapatillasYeezy = new indumentaria(3, "Adidas", "Zapatillas Yeezy", 23000, "../assets/img/adidas-yeezy.png");
+const zapatillasSuperstar = new indumentaria(4, "Adidas", "Zapatillas SuperStar", 22000, "../assets/img/adidas-superstar.png");
+const zapatillasNewbalanceUno = new indumentaria(5, "New Balance", "Zapatillas New Balance", 25000, "../assets/img/newbalance-zapas.png");
+const zapatillasNewbalanceDos = new indumentaria(6, "New Balance", "Zapatillas New Balance", 20000, "../assets/img/newbalance-zapas2.png");
+const camperaAdidas = new indumentaria(7, "Adidas", "Campera Adidas retro", 14000, "../assets/img/campera-adidas.png");
+const zapatillasJordan = new indumentaria(8, "Jordan Nike", "Zapatillas Jordan", 32000, "../assets/img/jordan-nike.png");
+const zapatillasNike = new indumentaria(8, "Nike", "Zapatillas Nike", 19000, "../assets/img/nike-zapas.png");
+const buzoSupremeUno = new indumentaria(9, "Supreme", "Buzo Supreme", 20000, "../assets/img/supreme-buzo.png");
+const buzoSupremeDos = new indumentaria(10, "Supreme", "Buzo Supreme", 22500, "../assets/img/supreme-buzo2.png");
+const gorroSupreme = new indumentaria(11, "Supreme", "Gorro Supreme", 7500, "../assets/img/supreme-gorra.png");
+
+
+
+const productos = [remeraAirMax, camperaNorthFace, zapatillasYeezy, zapatillasSuperstar, zapatillasNewbalanceUno, 
+    zapatillasNewbalanceDos, camperaAdidas, zapatillasJordan, zapatillasNike, buzoSupremeUno, buzoSupremeDos, gorroSupreme];
+
+guardarProductos(productos);
+
+
+//Secciones HTML
+
+const seccionProductos = document.getElementById("productos");
+
+//const seccionCarrito = document.getElementById("carrito");
+
+//const productosEnCarrito = document.getElementById("productosCarrito");
+
+//const seccionTotal = document.getElementById("totalConfirmar");
+
+//Renderizado de productos
+
+function renderProductos(){
+    obtenerProductos();
+    for(const producto of productos){
+        const tarjetas = document.createElement("div");
+        tarjetas.className = "tarjeta";
+        tarjetas.innerHTML = `  <img src="${producto.imagen}" alt="${producto.nombre}">
+                                <h3>${producto.nombre}</h3>
+                                <h4>$ ${producto.precio}</h4>
+                                <button class="boton1" onclick="agregarCarrito(${producto.id})" >Añadir al carrito</button>
+                                <a href="">Ver mas detalles</a>
+                                `
+        seccionProductos.appendChild(tarjetas);
+    }    
+}
+
+//Elemento seleccionado
+/*
+function seleccionado (id){
+    return productos.find(x => x.id == id);
+}
+
+
+//Agregar elemento al carrito
+
+function agregarCarrito(id){
+    let productoSeleccionado = seleccionado(id);
+    let carritoProductos = obtenerProductosCarrito();
+    productoSeleccionado.cantidad = 1;
+    carritoProductos.push(productoSeleccionado);
+    guardarProductosCarrito(carritoProductos);
+        const elementoAñadido = document.createElement("div");
+        elementoAñadido.className = "elementoAñadido";
+        elementoAñadido.innerHTML = `
+                                    <div>
+                                    <h3>${productoSeleccionado.nombre}</h3>
+                                    <h4>${productoSeleccionado.precio}$</h4>
+                                    <button class="boton1" onclick="eliminarCarrito(${productoSeleccionado.id})">Eliminar</button>
+                                    </div>
+                                    <div>
+                                    <img class="imgCarrito" src="${productoSeleccionado.imagen}" alt="">
+                                    </div>
+                                    `
+        productosEnCarrito.appendChild(elementoAñadido);
+        seccionTotal.innerHTML = "";
+        if(carritoProductos.length > 0){
+            seccionTotal.innerHTML = `
+                                    <button class="boton2" onclick="confirmarCompra()">Confirmar compra</button>
+                                    <h4>Total a pagar: $${compraTotal = compraTotal + productoSeleccionado.precio}</h4>
+                                    `
         }
 }
 
-const zapatillaAdidas = new indumentaria ("Zapatilla", "Zapatillas Adidas", 8000);
-const zapatillaNike = new indumentaria ("Zapatilla", "Zapatillas Nike", 12000);
-const remeraAdidas = new indumentaria ("Remera", "Remera Adidas", 4000);
-const remeraNike = new indumentaria ("Remera", "Remera Nike", 3500);
-const pantalonAdidas = new indumentaria ("Pantalon", "Pantalon Adidas", 5000);
-const pantalonNike = new indumentaria ("Pantalon","Pantalon Nike", 5500);
-const camperaAdidas = new indumentaria ("Campera","Campera Adidas", 21000);
-const camperaNike = new indumentaria ("Campera","Campera Nike", 25000);
 
+//Eliminar elemento del carrito
 
-//Arrays
-
-const ropaComprada = [];
-
-//Errores
-
-function errorUsuario() {alert("Ingrese un usuario valido");}
-function errorProducto() {alert("Ingrese producto valido");}
-
-//Saludo y despedida
-
-function despedida(usuario){
-    alert("Adios " + usuario + ", esperamos verte pronto por aqui :)");
-}
-
-function despedidaCompra(usuario, total){
-    alert("Gracias por tu compra " + usuario + "!" + ", tu total a pagar es $" + total);
-}
-
-function saludoBienvenida(usuario){
-    alert("Bienvenido/a " + usuario + " a nuestro ecommerce, aqui encontraras ropa de calidad y al mejor precio!");
-}
-
-//Seleccion Zapatillas
-
-function zapatillas (){
-    let seleccionZapatilla = parseInt(prompt("1- Zapatillas Adidas $" + zapatillaAdidas.precio + 
-    "\n2- Zapatillas Nike $" + zapatillaNike.precio + "\n3- Finalizar Compra"));
-    if (seleccionZapatilla == 1){
-        ropaComprada.push(zapatillaAdidas);
-        zapatillaAdidas.comprado();
-        compraTotal = compraTotal + zapatillaAdidas.precio;
-    }
-    if(seleccionZapatilla == 2){
-        ropaComprada.push(zapatillaNike);
-        zapatillaNike.comprado();
-        compraTotal = compraTotal + zapatillaNike.precio;
-    }
-    if(seleccionZapatilla == null){
-        errorProducto();
-    }else if (seleccionZapatilla == ""){
-        errorProducto();
-    }
-}
-
-//Seleccion Remeras
-
-function remeras(){
-    let seleccionRemera = parseInt(prompt("1-Remera Adidas $" + remeraAdidas.precio 
-    + "\n2-Remera Nike $" + remeraNike.precio + "\n3-Finalizar Compra"));
-    if(seleccionRemera == 1){
-        ropaComprada.push(remeraAdidas);
-        remeraAdidas.comprado();
-        compraTotal = compraTotal + remeraAdidas.precio;
-    }
-    if(seleccionRemera == 2){
-        ropaComprada.push(remeraNike);
-        remeraNike.comprado();
-        compraTotal = compraTotal + remeraNike.precio;
-    }
-    if(seleccionRemera == null){
-        errorProducto();
-    }else if (seleccionRemera == ""){
-        errorProducto();
-    }
-}
-
-//Seleccion Pantalones
-
-function pantalones(){
-    let seleccionPantalon = parseInt(prompt("1-Pantalon Adidas $" + pantalonAdidas.precio 
-    + "\n2-Pantalon Nike $" + pantalonNike.precio + "\n3-Finalizar Compra"));
-    if(seleccionPantalon == 1){
-        ropaComprada.push(pantalonAdidas);
-        pantalonAdidas.comprado();
-        compraTotal = compraTotal + pantalonAdidas.precio;
-    }
-    if(seleccionPantalon == 2){
-        ropaComprada.push(pantalonNike);
-        pantalonNike.comprado();
-        compraTotal = compraTotal + pantalonNike.precio;
-    }
-    if(seleccionPantalon == null){
-        errorProducto();
-    }else if (seleccionPantalon == ""){
-        errorProducto();
-    }
-}
-
-//Seleccion Camperas
-
-function camperas(){
-    let seleccionCampera = parseInt(prompt("1-Campera Adidas $" + camperaAdidas.precio 
-    + "\n2-Campera Nike $" + camperaNike.precio + "\n3-Finalizar Compra"));
-    if(seleccionCampera == 1){
-        ropaComprada.push(camperaAdidas);
-        camperaAdidas.comprado();
-        compraTotal = compraTotal + camperaAdidas.precio;
-    }
-    if(seleccionCampera == 2){
-        ropaComprada.push(camperaNike);
-        camperaNike.comprado();
-        compraTotal = compraTotal + camperaNike.precio;
-    }
-    if(seleccionCampera == null){
-        errorProducto();
-    }else if (seleccionCampera == ""){
-        errorProducto();
-    }
-}
-
-
-//Seleccion de producto
-
-function seleccionProductos(){
-    let productos = parseInt(prompt("Porfavor seleccione que producto desea comprar: " + "\n1-Zapatillas"
-    + "\n2-Remeras" + "\n3-Pantalones" + "\n4-Camperas" + "\n5-Cancelar" + "\n6-Finalizar Compra"));
-    while (productos !== 5){
-        if(productos === 1){
-            zapatillas();
-            let opcion = prompt("Desea seguir comprando? Si/No");
-            if(opcion == "Si" || opcion == "si"){
-                seleccionProductos();
-                productos = 5;
-            }
-            if(opcion == "No" || opcion == "no"){
-                productos = 5;
-            }
+function eliminarCarrito(id){
+    let carritoProductos = obtenerProductosCarrito();
+    let productoSeleccionado = seleccionado(id);
+    console.log(productoSeleccionado);
+    let posicion = carritoProductos.findIndex(x => x.id == id);
+    carritoProductos[posicion].cantidad -= 1;
+    compraTotal = 0;
+    if(carritoProductos[posicion].cantidad == 0){
+        carritoProductos.splice(posicion, 1);
+        productosEnCarrito.innerHTML = "";
+        seccionTotal.innerHTML = "";
+        for(let producto of carritoProductos){
+            const elementoAñadido = document.createElement("div");
+            elementoAñadido.className = "elementoAñadido";
+            elementoAñadido.innerHTML = `
+                                        <div>
+                                        <h3>${producto.nombre}</h3>
+                                        <h4>${producto.precio}$</h4>
+                                        <button class="boton1" onclick="eliminarCarrito(${producto.id})">Eliminar</button>
+                                        </div>
+                                        <div>
+                                        <img class="imgCarrito" src="${producto.imagen}" alt="">
+                                        </div>
+                                        `
+            productosEnCarrito.appendChild(elementoAñadido);
+            seccionTotal.innerHTML = `
+            <button class="boton2" onclick="confirmarCompra()">Confirmar compra</button>
+            <h4>Total a pagar: $${compraTotal = compraTotal + producto.precio}</h4>
+            `
         }
-        if(productos === 2){
-            remeras();
-            let opcion = prompt("Desea seguir comprando? Si/No");
-            if(opcion == "Si" || opcion == "si"){
-                seleccionProductos();
-                productos = 5;
-            }
-            if(opcion == "No" || opcion == "no"){
-                productos = 5;
-            }
-        }
-        if(productos === 3){
-            pantalones();
-            let opcion = prompt("Desea seguir comprando? Si/No");
-            if(opcion == "Si" || opcion == "si"){
-                seleccionProductos();
-                productos = 5;
-            }
-            if(opcion == "No" || opcion == "no"){
-                productos = 5;
-            }
-        }
-        if(productos === 4){
-            camperas();
-            let opcion = prompt("Desea seguir comprando? Si/No");
-            if(opcion == "Si" || opcion == "si"){
-                seleccionProductos();
-                productos = 5;
-            }
-            if(opcion == "No" || opcion == "no"){
-                productos = 5;
-            }
-        }
-        if(productos === 6){
-            productos = 5;
-        }
+        guardarProductosCarrito(carritoProductos);
     }
 }
 
-//Main
-//Ingreso de usuario
+//Evento confirmar compra
 
-let ingresoUsuario = prompt("Ingrese su nombre de usuario:");
-if(ingresoUsuario == null){
-    errorUsuario();
-}else if(ingresoUsuario == ""){
-    errorUsuario();
-}
-
-//Bienvenida al usuario
-
-saludoBienvenida(ingresoUsuario);
-
-//Compra
-
-seleccionProductos();
-
-//Despedida
-
-if(compraTotal > 1){
-    alert("Carrito de compras\n " + ropaComprada.map((ropa) => " " + ropa.nombre + " por $" + ropa.precio + "\n"));
-    let confirmacion = prompt("Confirma su compra? (Si/No):");
-    if(confirmacion == "si" || confirmacion == "Si"){
-        despedidaCompra(ingresoUsuario, compraTotal);
-    }else{
-        despedida(ingresoUsuario);
-    }
-}else{
-    despedida(ingresoUsuario);
+function confirmarCompra(){
+    let carritoProductos = obtenerProductosCarrito();
+    seccionTotal.innerHTML = "";
+    seccionTotal.innerHTML = `
+                            <h4>
+                                Compra confirmada
+                            </h4>
+                            `
+    productosEnCarrito.innerHTML = "";
+    carritoProductos = [];
+    guardarProductosCarrito(carritoProductos);
 }
 */
+
+//Renderizado de productos
+renderProductos();
+
+
+
+
+
+
+
