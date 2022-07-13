@@ -76,13 +76,13 @@
             }
         }
     }
+    .info{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+    .productos{
+        grid-template-columns: 1fr;
+    }
 }
 
-.info{
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.productos{
-    grid-template-columns: 1fr;
-}
