@@ -65,11 +65,24 @@ guardarProductos(productos);
 
 const seccionProductos = document.getElementById("productos");
 
-//const seccionCarrito = document.getElementById("carrito");
+//Carrito
+const seccionCarrito = document.getElementById("carrito");
+const productosEnCarrito = document.getElementById("productosCarrito");
+const seccionTotal = document.getElementById("totalConfirmar");
 
-//const productosEnCarrito = document.getElementById("productosCarrito");
+//Botones Carrito
 
-//const seccionTotal = document.getElementById("totalConfirmar");
+let abrirCarrito = document.getElementById("abrirCarrito");
+
+abrirCarrito.onclick = () => {
+    seccionCarrito.classList.add("carritoActivo");
+}
+
+let cerrarCarrito = document.getElementById("cerrarCarrito");
+
+cerrarCarrito.onclick = () => {
+    seccionCarrito.classList.remove("carritoActivo");
+}
 
 //Renderizado de productos
 
@@ -89,7 +102,7 @@ function renderProductos(){
 }
 
 //Elemento seleccionado
-/*
+
 function seleccionado (id){
     return productos.find(x => x.id == id);
 }
@@ -176,7 +189,7 @@ function confirmarCompra(){
     carritoProductos = [];
     guardarProductosCarrito(carritoProductos);
 }
-*/
+
 
 //Renderizado de productos
 renderProductos();
