@@ -49,11 +49,14 @@ const zapatillasNike = new indumentaria(8, "Nike", "Zapatillas Nike", 19000, "..
 const buzoSupremeUno = new indumentaria(9, "Supreme", "Buzo Supreme", 20000, "../assets/img/supreme-buzo.png");
 const buzoSupremeDos = new indumentaria(10, "Supreme", "Buzo Supreme", 22500, "../assets/img/supreme-buzo2.png");
 const gorroSupreme = new indumentaria(11, "Supreme", "Gorro Supreme", 7500, "../assets/img/supreme-gorra.png");
+const conjuntoNike = new indumentaria(12, "Nike", "Conjunto Nike", 18000, "../assets/img/conjunto-nike.png");
+const ojotasAdidas = new indumentaria(13, "Adidas", "Ojotas Adidas", 5500, "../assets/img/ojotas-adidas.png");
 
 
 
 const productos = [remeraAirMax, camperaNorthFace, zapatillasYeezy, zapatillasSuperstar, zapatillasNewbalanceUno, 
-    zapatillasNewbalanceDos, camperaAdidas, zapatillasJordan, zapatillasNike, buzoSupremeUno, buzoSupremeDos, gorroSupreme];
+    zapatillasNewbalanceDos, camperaAdidas, zapatillasJordan, zapatillasNike, buzoSupremeUno, buzoSupremeDos, gorroSupreme,
+    conjuntoNike, ojotasAdidas];
 
 guardarProductos(productos);
 
