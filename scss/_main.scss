@@ -79,6 +79,9 @@
             color: $color-primario;
         }
     }
+    .buscadorMobile{
+        display: none;
+    }
     .header1{
         display: flex;
         flex-direction: column;

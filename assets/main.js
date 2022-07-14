@@ -65,12 +65,12 @@ guardarProductos(productos);
 
 const seccionProductos = document.getElementById("productos");
 
-//Carrito
+//Carrito 
 const seccionCarrito = document.getElementById("carrito");
 const productosEnCarrito = document.getElementById("productosCarrito");
 const seccionTotal = document.getElementById("totalConfirmar");
 
-//Botones Carrito
+//Botones Carrito 
 
 let abrirCarrito = document.getElementById("abrirCarrito");
 
@@ -83,6 +83,7 @@ let cerrarCarrito = document.getElementById("cerrarCarrito");
 cerrarCarrito.onclick = () => {
     seccionCarrito.classList.remove("carritoActivo");
 }
+
 
 //Renderizado de productos
 

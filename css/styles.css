@@ -97,6 +97,10 @@
   color: #FFFFFF;
 }
 
+.grillas .buscadorMobile {
+  display: none;
+}
+
 .grillas .header1 {
   display: flex;
   flex-direction: column;
@@ -614,122 +618,15 @@ nav .carritoActivo {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  .navMobile {
+  .navDesktop li {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+  .navDesktop .buscadorMobile {
     display: unset;
-  }
-  .navMobile .buscadorCarrito {
-    justify-content: space-around;
-    margin-top: 10px;
-  }
-  .navMobile .buscadorCarrito .buscador {
-    width: 150px;
-    margin-right: 0px;
-  }
-  .navMobile .buscadorCarrito a {
-    color: #131313;
-  }
-  .navMobile .buscadorCarrito .iconoCarrito {
-    font-size: 30px;
-    color: #131313;
-  }
-  .navMobile .logo img {
-    margin-left: 0px;
-  }
-  .navMobile .carrito {
-    background-color: #F8FAFB;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    grid-area: "carrito";
-    width: 400px;
-    position: fixed;
-    top: 0;
-    right: -100%;
-    transition: 0.3s;
-  }
-  .navMobile .carrito .tuCarrito {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 15px;
-    width: 100%;
-  }
-  .navMobile .carrito .tuCarrito h3 {
-    font-size: 20px;
-    font-family: "fuente1";
-  }
-  .navMobile .carrito .tuCarrito a {
-    color: #131313;
-  }
-  .navMobile .carrito .tuCarrito i {
-    font-size: 25px;
-    color: #131313;
-    cursor: pointer;
-  }
-  .navMobile .carrito .totalConfirmar {
-    height: 100px;
-    background-color: #FFFF;
-    width: 90%;
-    border-radius: 50px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: sticky;
-  }
-  .navMobile .carrito .totalConfirmar h4 {
-    font-family: "fuente1";
-  }
-  .navMobile .carrito .productosCarrito {
-    height: 500px;
-    overflow-y: scroll;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .navMobile .carrito .elementoAñadido {
-    display: flex;
-    height: auto;
-    padding: 20px;
-    height: 150px;
-    justify-content: space-around;
-    width: 90%;
-    background-color: #FFFF;
-    margin-bottom: 20px;
-    border-radius: 30px;
-  }
-  .navMobile .carrito .elementoAñadido h3 {
-    font-family: "fuente1";
-  }
-  .navMobile .carrito .elementoAñadido h4 {
-    font-family: "fuente2";
-  }
-  .navMobile .carrito .elementoAñadido button {
-    margin-top: 10px;
-    width: 80px;
-  }
-  .navMobile .carrito .elementoAñadido img {
-    height: 100%;
-  }
-  .navMobile .carrito .imgCarrito {
-    width: 100%;
-    height: 100px;
-  }
-  .navMobile .carritoActivo {
-    right: 0;
-  }
-  .navDesktop {
-    display: none;
   }
   .grillas {
     display: flex !important;
-  }
-  .grillas .navDesktop {
-    display: none;
   }
   .grillas .imgProducto {
     display: none;
@@ -767,6 +664,9 @@ nav .carritoActivo {
   }
   .productos {
     grid-template-columns: 1fr;
+  }
+  .ocultar {
+    display: none;
   }
 }
 
