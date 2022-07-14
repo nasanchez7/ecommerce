@@ -157,6 +157,18 @@ nav{
     .carritoActivo{
         right: 0;
     }
+    .logoCarrito{
+        display: flex;
+        flex-direction: row-reverse;
+        i{
+            font-size: 25px;
+        }
+        h3{
+            top: 0;
+            font-family: "fuente1";
+            font-size: 15px;
+        }
+    }
 }
 
 //Productos

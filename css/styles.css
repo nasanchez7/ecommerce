@@ -583,6 +583,21 @@ nav .carritoActivo {
   right: 0;
 }
 
+nav .logoCarrito {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+nav .logoCarrito i {
+  font-size: 25px;
+}
+
+nav .logoCarrito h3 {
+  top: 0;
+  font-family: "fuente1";
+  font-size: 15px;
+}
+
 .seccionProductos .tituloProductos {
   font-family: "fuente1";
   font-size: 25px;

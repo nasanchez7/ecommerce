@@ -65,6 +65,8 @@ guardarProductos(productos);
 
 const seccionProductos = document.getElementById("productos");
 
+const contadorCarrito = document.getElementById("contadorCarrito");
+
 //Carrito 
 const seccionCarrito = document.getElementById("carrito");
 const productosEnCarrito = document.getElementById("productosCarrito");
@@ -142,6 +144,9 @@ function agregarCarrito(id){
                                         <button class="boton2" onclick="confirmarCompra()">Confirmar compra</button>
                                         <h4>Total a pagar: $${compraTotal = compraTotal + productoSeleccionado.precio}</h4>
                                         ` : seccionTotal.innerHTML = ""
+                                        
+        carritoProductos.length > 0 ? contadorCarrito.innerHTML = `${carritoProductos.length}` : 
+                                     contadorCarrito.innerHTML = ""
 }
 
 //Eliminar elemento del carrito
@@ -177,6 +182,8 @@ function eliminarCarrito(id){
             `
         }
         guardarProductosCarrito(carritoProductos);
+        carritoProductos.length > 0 ? contadorCarrito.innerHTML = `${carritoProductos.length}` : 
+        contadorCarrito.innerHTML = ""
     }
 }
 
@@ -193,6 +200,8 @@ function confirmarCompra(){
     productosEnCarrito.innerHTML = "";
     carritoProductos = [];
     guardarProductosCarrito(carritoProductos);
+    carritoProductos.length > 0 ? contadorCarrito.innerHTML = `${carritoProductos.length}` : 
+    contadorCarrito.innerHTML = ""
 }
 
 
