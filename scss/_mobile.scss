@@ -15,7 +15,13 @@
     .grillas{
         display: flex!important;
         .imgProducto{
-            display: none;
+            left: 180px!important;
+            margin-top: 0px!important;
+            top: 319px;
+            img{
+                height: 110px!important;
+                
+            }
         }
         .header1{
             justify-content: center;
@@ -58,6 +64,7 @@
     .info{
         width: 100%;
         flex-wrap: wrap;
+        margin-top: 50px;
     }
     
     .productos{
@@ -66,6 +73,24 @@
 
     .ocultar{
         display: none;
+    }
+
+
+    nav{
+        position: fixed;
+        width: 100%;
+        justify-content: space-around;
+        background-color: $color-primario;
+        top: 0;
+    }
+    .carrito{
+        height: 500px;
+    }
+
+    .seccionProductos{
+        .tituloProductos{
+            margin-top: 73px;
+        }
     }
 }
 
