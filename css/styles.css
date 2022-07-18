@@ -288,6 +288,7 @@
   border: none;
   color: #FFFFFF;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .boton1 a {
@@ -335,6 +336,11 @@
 .tarjeta a {
   color: #131313;
   font-size: 10px;
+}
+
+.tarjeta img:hover {
+  transform: scale(1.1);
+  transition: 3s;
 }
 
 footer {

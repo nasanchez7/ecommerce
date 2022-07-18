@@ -23,4 +23,8 @@
         font-size: 10px;
         @extend .titulo;
     }
+    img:hover{
+        transform: scale(1.1);
+        transition: 3s;
+    }
 }

@@ -4,6 +4,7 @@
     border: none;
     color: $color-primario;
     border-radius: 10px;
+    cursor: pointer;
     @extend .titulo;
     a{
         text-decoration: none;
