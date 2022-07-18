@@ -698,7 +698,8 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
     top: 0;
   }
   .carrito {
-    height: 500px;
+    height: 100%;
+    width: 350px;
   }
   .seccionProductos .tituloProductos {
     margin-top: 73px;
