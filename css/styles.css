@@ -1,4 +1,10 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "fuente1";
   src: url(../assets/fonts/sf-compact-display-medium.otf);
@@ -403,6 +409,8 @@ nav {
   grid-area: "nav1";
   z-index: 100;
   position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
 nav ul {
@@ -473,30 +481,22 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
   cursor: pointer;
 }
 
-nav .ocultarCarrito {
-  display: none;
-}
-
-nav .carritoActivo {
-  display: unset;
-}
-
-nav .carrito {
+.carrito {
   background-color: #F8FAFB;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  grid-area: "carrito";
   width: 400px;
-  height: 600px;
+  height: 100%;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   transition: 0.3s;
+  z-index: 2;
 }
 
-nav .carrito .tuCarrito {
+.carrito .tuCarrito {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -504,22 +504,22 @@ nav .carrito .tuCarrito {
   width: 100%;
 }
 
-nav .carrito .tuCarrito h3 {
+.carrito .tuCarrito h3 {
   font-size: 20px;
   font-family: "fuente1";
 }
 
-nav .carrito .tuCarrito a {
+.carrito .tuCarrito a {
   color: #131313;
 }
 
-nav .carrito .tuCarrito i {
+.carrito .tuCarrito i {
   font-size: 25px;
   color: #131313;
   cursor: pointer;
 }
 
-nav .carrito .totalConfirmar {
+.carrito .totalConfirmar {
   height: 100px;
   background-color: #FFFF;
   width: 90%;
@@ -532,11 +532,11 @@ nav .carrito .totalConfirmar {
   position: sticky;
 }
 
-nav .carrito .totalConfirmar h4 {
+.carrito .totalConfirmar h4 {
   font-family: "fuente1";
 }
 
-nav .carrito .productosCarrito {
+.carrito .productosCarrito {
   height: 500px;
   overflow-y: scroll;
   width: 90%;
@@ -545,7 +545,7 @@ nav .carrito .productosCarrito {
   align-items: center;
 }
 
-nav .carrito .elementoAñadido {
+.carrito .elementoAñadido {
   display: flex;
   height: auto;
   padding: 20px;
@@ -557,42 +557,42 @@ nav .carrito .elementoAñadido {
   border-radius: 30px;
 }
 
-nav .carrito .elementoAñadido h3 {
+.carrito .elementoAñadido h3 {
   font-family: "fuente1";
 }
 
-nav .carrito .elementoAñadido h4 {
+.carrito .elementoAñadido h4 {
   font-family: "fuente2";
 }
 
-nav .carrito .elementoAñadido button {
+.carrito .elementoAñadido button {
   margin-top: 10px;
   width: 80px;
 }
 
-nav .carrito .elementoAñadido img {
+.carrito .elementoAñadido img {
   height: 100%;
 }
 
-nav .carrito .imgCarrito {
+.carrito .imgCarrito {
   width: 100%;
   height: 100px;
 }
 
-nav .carritoActivo {
+.carritoActivo {
   right: 0;
 }
 
-nav .logoCarrito {
+.logoCarrito {
   display: flex;
   flex-direction: row-reverse;
 }
 
-nav .logoCarrito i {
+.logoCarrito i {
   font-size: 25px;
 }
 
-nav .logoCarrito h3 {
+.logoCarrito h3 {
   top: 0;
   font-family: "fuente1";
   font-size: 15px;
@@ -703,11 +703,5 @@ nav .logoCarrito h3 {
   .seccionProductos .tituloProductos {
     margin-top: 73px;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 /*# sourceMappingURL=styles.css.map */
