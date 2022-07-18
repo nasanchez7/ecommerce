@@ -229,9 +229,14 @@
         margin-top: 20px;
     }
     .tarjetas{
+        padding: 10px;
+        overflow-x: scroll;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-top: 20px;
+        .tarjeta{
+            margin-right: 30px;
+        }
     }
 }
 
