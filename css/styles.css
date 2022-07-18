@@ -76,12 +76,12 @@ body::-webkit-scrollbar-track {
   src: url(../assets/fonts/sf-compact-display-thin.otf);
 }
 
-.titulo, .grillas .header1 .descripcionProducto .tituloProducto h2, .grillas .header1 .descripcionProducto .precio, .grillas .header1 .descripcionProducto a, .grillas .header2 .tituloProducto h2, .boton1, .tarjeta h3, .tarjeta a, footer .acerca-redes .acercaDe h3, footer .acerca-redes .redes h3, footer .ubi-derechos .localizacion h3 {
+.titulo, .productoDestacado .descripcionProducto .tituloProducto h2, .productoDestacado .descripcionProducto .precio, .productoDestacado .descripcionProducto a, .boton1, .tarjeta h3, .tarjeta a, footer .acerca-redes .acercaDe h3, footer .acerca-redes .redes h3, footer .ubi-derechos .localizacion h3 {
   font-family: "Century Gothic";
   font-weight: 700;
 }
 
-.subtitulo, .grillas .header1 .descripcionProducto h4, .grillas .header1 .descripcionProducto h3, .tarjeta h4, footer .acerca-redes .acercaDe a, footer .ubi-derechos h3 {
+.subtitulo, .productoDestacado .descripcionProducto h4, .productoDestacado .descripcionProducto h3, .tarjeta h4, footer .acerca-redes .acercaDe a, footer .ubi-derechos h3 {
   font-family: "Century Gothic";
   font-weight: 400;
 }
@@ -168,80 +168,63 @@ body::-webkit-scrollbar-track {
   display: none;
 }
 
-.grillas .header1 {
+.productoDestacado .sliderContenedor {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 700px;
-  grid-area: "nav1";
 }
 
-.grillas .header1 .descripcionProducto {
+.productoDestacado .descripcionProducto {
   margin-left: 30px;
-  margin-top: 80px;
   animation-duration: 1.5s;
+  height: 450px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.grillas .header1 .descripcionProducto h4 {
+.productoDestacado .descripcionProducto h4 {
   color: #FD794F;
   margin-bottom: 5px;
 }
 
-.grillas .header1 .descripcionProducto .tituloProducto h2 {
+.productoDestacado .descripcionProducto .tituloProducto h2 {
   line-height: 83.5%;
   font-size: 100px;
   color: #131313;
 }
 
-.grillas .header1 .descripcionProducto h3 {
+.productoDestacado .descripcionProducto h3 {
   font-size: 22px;
   margin-top: 10px;
   color: #131313;
 }
 
-.grillas .header1 .descripcionProducto .precio {
+.productoDestacado .descripcionProducto .precio {
   color: #131313;
   font-size: 15px;
   margin-top: 5px;
 }
 
-.grillas .header1 .descripcionProducto .botones {
+.productoDestacado .descripcionProducto .botones {
   margin-top: 10px;
 }
 
-.grillas .header1 .descripcionProducto a {
+.productoDestacado .descripcionProducto a {
   font-size: 12px;
   color: #131313;
 }
 
-.grillas .header1 .imgProducto {
-  position: absolute;
-  left: 500px;
-  height: 430px;
-  transform: rotate(-4.44deg);
-  margin-top: 50px;
+.productoDestacado .descripcionProducto img {
+  left: 550px;
+  height: 450px;
 }
 
-.grillas .header1 .imgProducto img {
-  height: 400px;
-  animation-duration: 1.5s;
-}
-
-.grillas .header1 .imgProducto:hover {
-  transform: rotate(0deg);
-  transform: scale(1.1);
-  transition: 3s;
-}
-
-.grillas .header1 .marcas {
+.productoDestacado .marcas {
   width: 100%;
-  margin-top: 70px;
   display: flex;
-  justify-content: center;
   animation-duration: 2s;
 }
 
-.grillas .header1 .marcas .contenedor {
+.productoDestacado .marcas .contenedor {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,42 +232,18 @@ body::-webkit-scrollbar-track {
   width: 650px;
   border-radius: 30px;
   height: 100px;
+  margin-bottom: 50px;
+  margin-left: 30px;
 }
 
-.grillas .header1 .marcas .contenedor .marca {
+.productoDestacado .marcas .contenedor .marca {
   height: 45px;
   margin: 10px;
 }
 
-.grillas .header1 .marcas .contenedor .marca:hover {
+.productoDestacado .marcas .contenedor .marca:hover {
   transform: scale(1.1);
   transition: 1s;
-}
-
-.grillas .header2 {
-  background-color: #FD794F;
-  grid-area: "nav2";
-}
-
-.grillas .header2 .tituloProducto {
-  animation-duration: 4s;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  height: 80%;
-  justify-content: center;
-  margin-right: 20px;
-}
-
-.grillas .header2 .tituloProducto h2 {
-  line-height: 83.5%;
-  font-size: 100px;
-  color: #13131318;
-  animation-duration: 5s;
-}
-
-.grillas .header2 .buscadorCarrito {
-  margin-top: 15px;
 }
 
 .info {
