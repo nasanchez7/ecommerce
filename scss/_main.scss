@@ -87,8 +87,16 @@
 //Producto destacado
 
 .productoDestacado{
-    .sliderContenedor{
-        display: flex;
+    .slider{
+        overflow: hidden;
+        .sliderContenedor{
+            display: flex;
+            width: 500vw;
+            transition: all 1s ease-in-out;
+            .sliderItem{
+                width: 100vw;
+            }
+        }
     }
     .descripcionProducto{
         margin-left: 30px;

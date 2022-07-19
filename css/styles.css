@@ -168,8 +168,18 @@ body::-webkit-scrollbar-track {
   display: none;
 }
 
-.productoDestacado .sliderContenedor {
+.productoDestacado .slider {
+  overflow: hidden;
+}
+
+.productoDestacado .slider .sliderContenedor {
   display: flex;
+  width: 500vw;
+  transition: all 1s ease-in-out;
+}
+
+.productoDestacado .slider .sliderContenedor .sliderItem {
+  width: 100vw;
 }
 
 .productoDestacado .descripcionProducto {
