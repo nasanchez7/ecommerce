@@ -256,6 +256,10 @@ body::-webkit-scrollbar-track {
   transition: 1s;
 }
 
+.destacadoMobile {
+  display: none;
+}
+
 .info {
   height: 140px;
   background-color: #131313;
@@ -676,12 +680,11 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
 
 /* Mobile */
 @media screen and (max-width: 480px) {
-  .navDesktop li {
-    margin-left: 5px !important;
-    margin-right: 5px !important;
-  }
-  .navDesktop .buscadorMobile {
+  .navMobile {
     display: unset;
+  }
+  .ocultarNav {
+    display: none;
   }
   .grillas {
     display: flex !important;
@@ -693,26 +696,6 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
   }
   .grillas .imgProducto img {
     height: 110px !important;
-  }
-  .grillas .header1 {
-    justify-content: center;
-  }
-  .grillas .header1 .descripcionProducto {
-    margin-left: 10px;
-  }
-  .grillas .header1 .descripcionProducto .tituloProducto h2 {
-    font-size: 100px !important;
-  }
-  .grillas .header2 {
-    display: none;
-  }
-  .grillas .header2 .buscadorCarrito {
-    display: none;
-  }
-  .grillas .header1 .marcas .contenedor {
-    width: 100% !important;
-    height: 200px !important;
-    flex-wrap: wrap;
   }
   .destacados .tarjetas {
     flex-direction: column;
@@ -739,12 +722,83 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
     background-color: #FFFFFF;
     top: 0;
   }
+  nav li {
+    margin-left: 15px !important;
+  }
   .carrito {
     height: 100%;
     width: 350px;
   }
   .seccionProductos .tituloProductos {
     margin-top: 73px;
+  }
+  .productoDestacado {
+    display: none;
+  }
+  .destacadoMobile {
+    display: unset;
+  }
+  .destacadoMobile .imgProducto img {
+    position: absolute;
+    height: 110px !important;
+    left: 180px !important;
+    margin-top: 0px !important;
+    top: 288px;
+  }
+  .destacadoMobile .descripcionProducto {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 80px !important;
+    animation-duration: 1.5s;
+    justify-content: flex-start;
+  }
+  .destacadoMobile .descripcionProducto h4 {
+    color: #FD794F;
+    margin-bottom: 5px;
+    font-family: "fuente2";
+  }
+  .destacadoMobile .descripcionProducto .tituloProducto h2 {
+    line-height: 83.5%;
+    font-size: 100px;
+    color: #131313;
+    font-family: "fuente1";
+  }
+  .destacadoMobile .descripcionProducto h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #131313;
+    font-family: "fuente2";
+  }
+  .destacadoMobile .descripcionProducto .precio {
+    color: #131313;
+    font-size: 15px;
+    margin-top: 5px;
+    font-family: "fuente1";
+  }
+  .destacadoMobile .descripcionProducto .botones {
+    margin-top: 10px;
+  }
+  .destacadoMobile .descripcionProducto a {
+    font-size: 12px;
+    color: #131313;
+  }
+  .destacadoMobile .marcas {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .destacadoMobile .marcas .contenedor {
+    display: flex;
+    justify-content: space-around;
+    width: 90% !important;
+    height: 200px !important;
+    flex-wrap: wrap;
+    background-color: #F8FAFB;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
