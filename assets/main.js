@@ -317,6 +317,7 @@ function validarForm(){
         <h4>Error: completa los datos de tu tarjeta</h4>
     `
     }else{
+        productosEnCarrito.innerHTML = "";
         seccionTotal.innerHTML = `
         <h4>Compra realizada! Tu pedido llegara a ${direccion.value} en los proximos dias</h4>`
     }

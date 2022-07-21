@@ -344,6 +344,7 @@ body::-webkit-scrollbar-track {
   color: #FFFF;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .botonActivo {
@@ -576,10 +577,12 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
   align-items: center;
   justify-content: space-around;
   position: sticky;
+  padding: 20px;
 }
 
 .carrito .totalConfirmar h4 {
   font-family: "fuente1";
+  font-size: 13px;
 }
 
 .carrito .productosCarrito {
