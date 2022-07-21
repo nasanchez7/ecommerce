@@ -140,6 +140,9 @@ nav{
         h4{
             font-family: "fuente2";
         }
+        h5{
+            font-family: "fuente1";
+        }
         button{
             margin-top: 10px;
             width: 80px;
@@ -202,5 +205,48 @@ nav{
         color: #131313;
         font-size: 10px;
         font-family: "fuente1";
+    }
+}
+
+//Formulario de compra
+
+.form{
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primario;
+    height: 90%;
+    padding: 20px;
+    border-radius: 30px;
+    .tituloForm{
+        font-family: "fuente1";
+        color: lightgray;
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    label{
+        font-family: "fuente1";
+        font-size: 14px;
+        font-weight: 300;
+        color: $color-letras;
+    }
+    .inputForm{
+        margin: 10px 0px;
+        padding: 10px;
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid gray;
+    }
+    .tarjetasIconos{
+        i{
+            font-size: 35px;
+            margin-right: 10px;
+        }
+    }
+    .tarjetaInfo{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sm{
+        width: 30%;
     }
 }
