@@ -233,13 +233,13 @@ function confirmarCompra(){
     <h2 class="tituloForm">Informacion de pago</h2>
 
     <label for="">Nombre y apellido</label>
-    <input type="text" class="inputForm" value="">
+    <input type="text" class="inputForm" value="" id="nombre" required>
     
     <label for="">Numero de telefono</label>
-    <input type="text" class="inputForm" value="">
+    <input type="text" class="inputForm" value="" id="telefono" required>
     
     <label for="">Direccion</label>
-    <input type="text" class="inputForm" id="direccion" value="">
+    <input type="text" class="inputForm" id="direccion" value="" required>
 
     <h2 class="tituloForm">Metodo de pago</h2>
     <div class="tarjetasIconos">
@@ -247,18 +247,18 @@ function confirmarCompra(){
         <i class='bx bxl-mastercard' ></i>
     </div>
 
-    <input type="password" class="inputForm" placeholder="Numero de tarjeta">
+    <input type="password" class="inputForm" placeholder="Numero de tarjeta" id="tarjeta" required>
     <div class="tarjetaInfo">
-        <input type="text" placeholder="mm" class="inputForm sm" value="">
-        <input type="text" placeholder="yyyy" class="inputForm sm" value="">
-        <input type="text" placeholder="cvv" class="inputForm sm" value="">
+        <input type="text" placeholder="mm" class="inputForm sm" value="" id="tarjeta1" required>
+        <input type="text" placeholder="yyyy" class="inputForm sm" value="" id="tarjeta2" required>
+        <input type="text" placeholder="cvv" class="inputForm sm" value="" id="tarjeta3" required>
     </div>
 
     `
     productosEnCarrito.innerHTML = "";
     productosEnCarrito.appendChild(formulario);
 
-    
+    const direccion = document.getElementById("direccion");
 
     seccionTotal.innerHTML = `
     <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
@@ -271,22 +271,56 @@ function confirmarCompra(){
 }
 
 function validarForm(){
+    seccionTotal.innerHTML = ``
 
-    const inputs = document.querySelectorAll("inputForm");
+    const nombre = document.getElementById("nombre");
+    const telefono = document.getElementById("telefono");
+    const direccion = document.getElementById("direccion");
+    const tarjetaNumero = document.getElementById("tarjeta");
+    const tarjeta1 = document.getElementById("tarjeta1");
+    const tarjeta2 = document.getElementById("tarjeta2");
+    const tarjeta3 = document.getElementById("tarjeta3"); 
 
-    if(inputs.values == ""){
+    if(nombre.value == ""){
         seccionTotal.innerHTML = `
         <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
-        <h4>Total a pagar: $${compraTotal}</h4>
-        <h4>Error: complete todos los campos del formulario</h4>
-        `
-    }else{
-        const direccion = document.getElementById("direccion");
-        productosEnCarrito.innerHTML = "";
+        <h4>Error: completa el campo nombre</h4>
+    `
+    }else if(telefono.value == ""){
         seccionTotal.innerHTML = `
-        <h4>Compra confirmada! su pedido llegara a ${direccion.value} en los proximos dias.</h4>
-        `
+        <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
+        <h4>Error: completa el campo telefono</h4>
+    `
+    }else if(direccion.value == ""){
+        seccionTotal.innerHTML = `
+        <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
+        <h4>Error: completa el campo direccion</h4>
+    `
+    }else if(tarjetaNumero.value == ""){
+        seccionTotal.innerHTML = `
+        <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
+        <h4>Error: completa el campo tarjeta</h4>
+    `
+    }else if(tarjeta1.value == ""){
+        seccionTotal.innerHTML = `
+        <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
+        <h4>Error: completa los datos de tu tarjeta</h4>
+    `
+    }else if(tarjeta2.value == ""){
+        seccionTotal.innerHTML = `
+        <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
+        <h4>Error: completa los datos de tu tarjeta</h4>
+    `
+    }else if(tarjeta3.value == ""){
+        seccionTotal.innerHTML = `
+        <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
+        <h4>Error: completa los datos de tu tarjeta</h4>
+    `
+    }else{
+        seccionTotal.innerHTML = `
+        <h4>Compra realizada! Tu pedido llegara a ${direccion.value} en los proximos dias</h4>`
     }
+
 }
 
 function confirmarCompra1(){
