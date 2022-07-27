@@ -170,6 +170,7 @@ body::-webkit-scrollbar-track {
 
 .productoDestacado .slider {
   overflow: hidden;
+  margin-top: 90px;
 }
 
 .productoDestacado .slider .sliderContenedor {
