@@ -354,6 +354,13 @@ body::-webkit-scrollbar-track {
   border-radius: 20px;
 }
 
+.botonMarca {
+  color: #FFFFFF;
+  background-color: #131313;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 .tarjeta {
   height: 420px;
   width: 250px;
@@ -455,7 +462,10 @@ nav {
   align-items: center;
   grid-area: "nav1";
   z-index: 100;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  background-color: #FFFFFF;
+  top: 0;
   overflow: hidden;
   z-index: 1;
 }
@@ -655,7 +665,7 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
   font-family: "fuente1";
   font-size: 25px;
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
 .tarjeta {

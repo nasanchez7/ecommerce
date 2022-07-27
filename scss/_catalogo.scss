@@ -7,7 +7,10 @@ nav{
     align-items: center;
     grid-area: "nav1";
     z-index: 100;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    background-color: $color-primario;
+    top: 0;
     overflow: hidden;
     z-index: 1;
     ul{
@@ -182,7 +185,7 @@ nav{
         font-family: "fuente1";
         font-size: 25px;
         margin-left: 20px;
-        margin-top: 20px;
+        margin-top: 100px;
     }
 }
 

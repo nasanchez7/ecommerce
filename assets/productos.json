@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "marca": "Nike",
+        "nombre": "Remera Air Max",
+        "precio": 4500,
+        "imagen": "../assets/img/remera-airmax.png"
+    },
+    {
+        "id": 2,
+        "marca": "North Face",
+        "nombre": "Campera North Face",
+        "precio": 15000,
+        "imagen": "../assets/img/campera-northface.png"
+    },
+    {
+        "id": 3,
+        "marca": "Adidas",
+        "nombre": "Zapatillas Yeezy",
+        "precio": 23000,
+        "imagen": "../assets/img/adidas-yeezy.png"
+    },
+    {
+        "id": 4,
+        "marca": "Adidas",
+        "nombre": "Zapatillas SuperStar",
+        "precio": 22000,
+        "imagen": "../assets/img/adidas-superstar.png"
+    },
+    {
+        "id": 5,
+        "marca": "New Balance",
+        "nombre": "Zapatillas New Balance",
+        "precio": 25000,
+        "imagen": "../assets/img/newbalance-zapas.png"
+    },
+    {
+        "id": 6,
+        "marca": "New Balance",
+        "nombre": "Zapatillas New Balance",
+        "precio": 20000,
+        "imagen": "../assets/img/newbalance-zapas2.png"
+    },
+    {
+        "id": 7,
+        "marca": "Adidas",
+        "nombre": "Campera Adidas retro",
+        "precio": 14000,
+        "imagen": "../assets/img/campera-adidas.png"
+    },
+    {
+        "id": 8,
+        "marca": "Nike",
+        "nombre": "Zapatillas Jordan",
+        "precio": 32000,
+        "imagen": "../assets/img/jordan-nike.png"
+    },
+    {
+        "id": 9,
+        "marca": "Nike",
+        "nombre": "Zapatillas Nike",
+        "precio": 19000,
+        "imagen": "../assets/img/nike-zapas.png"
+    },
+    {
+        "id": 10,
+        "marca": "Supreme",
+        "nombre": "Buzo Supreme",
+        "precio": 20000,
+        "imagen": "../assets/img/supreme-buzo.png"
+    },
+    {
+        "id": 11,
+        "marca": "Supreme",
+        "nombre": "Buzo Supreme",
+        "precio": 22500,
+        "imagen": "../assets/img/supreme-buzo2.png"
+    },
+    {
+        "id": 12,
+        "marca": "Supreme",
+        "nombre": "Gorro Supreme",
+        "precio": 7500,
+        "imagen": "../assets/img/supreme-gorra.png"
+    },
+    {
+        "id": 13,
+        "marca": "Nike",
+        "nombre": "Conjunto Nike",
+        "precio": 18000,
+        "imagen": "../assets/img/conjunto-nike.png"
+    },
+    {
+        "id": 14,
+        "marca": "Adidas",
+        "nombre": "Ojotas Adidas",
+        "precio": 5500,
+        "imagen": "../assets/img/ojotas-adidas.png"
+    }
+]
