@@ -90,84 +90,6 @@ body::-webkit-scrollbar-track {
   display: none;
 }
 
-.grillas nav {
-  display: flex;
-  height: 60px;
-  align-items: center;
-  grid-area: "nav1";
-}
-
-.grillas nav ul {
-  display: flex;
-  grid-area: "nav1";
-  width: 100%;
-}
-
-.grillas nav ul a {
-  text-decoration: none;
-}
-
-.grillas nav ul a li {
-  list-style: none;
-  text-decoration: none;
-  font-family: "fuente1";
-  font-size: 14px;
-  margin-left: 50px;
-}
-
-.grillas nav .logo {
-  animation-duration: 2s;
-}
-
-.grillas nav .logo img {
-  margin-left: 20px;
-}
-
-.grillas .buscadorCarrito {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.grillas .buscadorCarrito .buscador {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  background-color: #F8FAFB;
-  width: 150px;
-  height: 40px;
-  border-radius: 20px;
-  justify-content: center;
-}
-
-.grillas .buscadorCarrito .buscador input {
-  border: none;
-  width: 100px;
-  padding: 5px;
-  background-color: #F8FAFB;
-}
-
-.grillas .buscadorCarrito .buscador input:focus {
-  outline: none;
-  background-color: #F8FAFB;
-}
-
-.grillas .buscadorCarrito .buscador .iconoBuscador {
-  margin-right: 10px;
-  font-size: 25px;
-  color: #FD794F;
-}
-
-.grillas .buscadorCarrito .iconoCarrito {
-  font-size: 25px;
-  margin-right: 20px;
-  color: #FFFFFF;
-}
-
-.grillas .buscadorMobile {
-  display: none;
-}
-
 .productoDestacado .slider {
   overflow: hidden;
   margin-top: 90px;
@@ -339,8 +261,7 @@ body::-webkit-scrollbar-track {
 
 .boton2 {
   height: 50px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 10px;
   background-color: #FD794F;
   color: #FFFF;
   border: none;
@@ -594,6 +515,31 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
 .carrito .totalConfirmar h4 {
   font-family: "fuente1";
   font-size: 13px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #131313;
+}
+
+.carrito .totalConfirmar .total {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.carrito .totalConfirmar .total h4 {
+  font-family: "fuente1";
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #131313;
+}
+
+.carrito .totalConfirmar .total h5 {
+  font-family: "fuente1";
+  font-size: 13px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #131313;
 }
 
 .carrito .productosCarrito {

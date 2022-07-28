@@ -239,8 +239,11 @@ function agregarCarrito(id){
         seccionTotal.innerHTML = "";
         //Operador ternario
         carritoProductos.length > 0 ?   seccionTotal.innerHTML = `
+                                        <div class="total">
+                                            <h4>Total a pagar:</h4>
+                                            <h5>$${compraTotal}</h5>
+                                        </div>
                                         <button class="boton2" onclick="confirmarCompra()">Confirmar compra</button>
-                                        <h4>Total a pagar: $${compraTotal}</h4>
                                         ` : seccionTotal.innerHTML = ""
                                         
         carritoProductos.length > 0 ? contadorCarrito.innerHTML = `${carritoProductos.length}` : 
@@ -291,8 +294,11 @@ function eliminarCarrito(id){
                                     `
         productosEnCarrito.appendChild(elementoAñadido);
         seccionTotal.innerHTML = `
+        <div class="total">
+            <h4>Total a pagar:</h4>
+            <h5>$${compraTotal}</h5>
+        </div>
         <button class="boton2" onclick="confirmarCompra()">Confirmar compra</button>
-        <h4>Total a pagar: $${compraTotal}</h4>
         `
     }
     guardarProductosCarrito(carritoProductos);
@@ -346,8 +352,11 @@ function confirmarCompra(){
     const direccion = document.getElementById("direccion");
 
     seccionTotal.innerHTML = `
+    <div class="total">
+            <h4>Total a pagar:</h4>
+            <h5>$${compraTotal}</h5>
+        </div>
     <button class="boton2" onclick="confirmarCompra1()">Confirmar compra</button>
-    <h4>Total a pagar: $${compraTotal}</h4>
     `
 
     carritoProductos.length > 0 ? contadorCarrito.innerHTML = `${carritoProductos.length}` : 

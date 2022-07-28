@@ -10,79 +10,12 @@
 }
 
 
-//Nav y header
+//Nav mobile
 
 .navMobile{
     display: none;
 }
 
-.grillas{
-    nav{
-        display: flex;
-        height: 60px;
-        align-items: center;
-        grid-area: "nav1";
-        ul{
-            display: flex;
-            grid-area: "nav1";
-            width: 100%;
-            a{
-                text-decoration: none;
-                li{
-                    list-style: none;
-                    text-decoration: none;
-                    font-family: "fuente1";
-                    font-size: 14px;
-                    margin-left: 50px;
-                }
-            }
-        }
-        .logo{
-            animation-duration: 2s;
-            img{
-                margin-left: 20px;
-            }
-        }
-    }
-    .buscadorCarrito{
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        .buscador{
-            display: flex;
-            align-items: center;
-            margin-right: 20px;
-            background-color: $color-primarioDos;
-            width: 150px;
-            height: 40px;
-            border-radius: 20px;
-            justify-content: center;
-            input{
-                border: none;
-                width: 100px;
-                padding: 5px; 
-                background-color: $color-primarioDos;
-            }
-            input:focus{
-                outline: none;
-                background-color: $color-primarioDos;
-            }
-            .iconoBuscador{
-                margin-right: 10px;
-                font-size: 25px;
-                color: $color-secundario;
-            }
-        }
-        .iconoCarrito{
-            font-size: 25px;
-            margin-right: 20px;
-            color: $color-primario;
-        }
-    }
-    .buscadorMobile{
-        display: none;
-    }
-}
 
 //Producto destacado
 
