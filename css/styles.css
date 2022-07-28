@@ -554,6 +554,7 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
 .carrito .elementoAñadido {
   display: flex;
   height: auto;
+  align-items: center;
   padding: 20px;
   justify-content: space-around;
   width: 90%;

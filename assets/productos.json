@@ -96,5 +96,47 @@
         "nombre": "Ojotas Adidas",
         "precio": 5500,
         "imagen": "../assets/img/ojotas-adidas.png"
+    },
+    {
+        "id": 15,
+        "marca": "New Balance",
+        "nombre": "Zapatillas New Balance",
+        "precio": 22000,
+        "imagen": "../assets/img/newbalance-zapas3.png"
+    },
+    {
+        "id": 16,
+        "marca": "New Balance",
+        "nombre": "Botines New Balance",
+        "precio": 18000,
+        "imagen": "../assets/img/newbalance-zapas4.png"
+    },
+    {
+        "id": 17,
+        "marca": "New Balance",
+        "nombre": "Zapatillas New Balance",
+        "precio": 26000,
+        "imagen": "../assets/img/newbalance-zapas5.png"
+    },
+    {
+        "id": 18,
+        "marca": "North Face",
+        "nombre": "Campera North Face",
+        "precio": 18000,
+        "imagen": "../assets/img/campera-northface1.png"
+    },
+    {
+        "id": 19,
+        "marca": "North Face",
+        "nombre": "Campera North Face",
+        "precio": 20000,
+        "imagen": "../assets/img/campera-northface2.png"
+    },
+    {
+        "id": 20,
+        "marca": "North Face",
+        "nombre": "Campera North Face",
+        "precio": 22000,
+        "imagen": "../assets/img/campera-northface3.png"
     }
 ]
