@@ -329,13 +329,13 @@ function confirmarCompra(){
     <h2 class="tituloForm">Informacion de pago</h2>
 
     <label for="">Nombre y apellido</label>
-    <input type="text" class="inputForm" value="" id="nombre" required>
+    <input placeholder="Nadir Blanco" type="text" class="inputForm" value="" id="nombre" required>
     
     <label for="">Numero de telefono</label>
-    <input type="text" class="inputForm" value="" id="telefono" required>
+    <input placeholder="11 1234 5678" type="text" class="inputForm" value="" id="telefono" required>
     
     <label for="">Direccion</label>
-    <input type="text" class="inputForm" id="direccion" value="" required>
+    <input placeholder="Calle 123, entre calle 1 y calle 2" type="text" class="inputForm" id="direccion" value="" required>
 
     <h2 class="tituloForm">Metodo de pago</h2>
     <div class="tarjetasIconos">
@@ -416,9 +416,13 @@ function validarForm(){
         <h4>Error: completa los datos de tu tarjeta</h4>
     `
     }else{
+        swal({
+            title: "Gracias " + nombre.value + "!",
+            text: "Tu pedido llegara a "+ direccion.value + " en los proximos dias",
+            icon: "success",
+        });
         productosEnCarrito.innerHTML = "";
-        seccionTotal.innerHTML = `
-        <h4>Compra realizada! Tu pedido llegara a ${direccion.value} en los proximos dias</h4>`
+        seccionTotal.innerHTML = ``
     }
 
 }
