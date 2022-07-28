@@ -555,7 +555,6 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
   display: flex;
   height: auto;
   padding: 20px;
-  height: 150px;
   justify-content: space-around;
   width: 90%;
   background-color: #FFFF;
@@ -580,17 +579,39 @@ nav .buscadorCarrito .iconoCarrito-catalogo {
   width: 80px;
 }
 
+.carrito .elementoAñadido .cantidad-img {
+  display: flex;
+}
+
 .carrito .elementoAñadido img {
   height: 100%;
 }
 
-.carrito .imgCarrito {
+.carrito .elementoAñadido .cantidad {
+  background-color: rgba(211, 211, 211, 0.2);
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.carrito .elementoAñadido .imgCarrito {
   width: 100%;
   height: 100px;
 }
 
+.carrito .elementoAñadido i {
+  cursor: pointer;
+  background-color: #FD794F;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
 .carritoActivo {
   right: 0;
+  box-shadow: -8px 0px 20px -13px #000000;
 }
 
 .logoCarrito {

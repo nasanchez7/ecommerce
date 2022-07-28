@@ -223,13 +223,15 @@ function agregarCarrito(id){
         elementoAñadido.className = "elementoAñadido";
         elementoAñadido.innerHTML = `
                                     <div>
+                                    <h5 class= "cantidad">${producto.cantidad}</h5>
                                     <h3>${producto.nombre}</h3>
                                     <h4>${producto.precio}$</h4>
-                                    <h5>Cantidad: ${producto.cantidad}</h5>
-                                    <button class="boton1" onclick="eliminarCarrito(${producto.id})">Eliminar</button>
+                                    <i class='bx bxs-trash' style='color:#ffffff' onclick="eliminarCarrito(${producto.id})" ></i>
                                     </div>
                                     <div>
+                                    
                                     <img class="imgCarrito" src="${producto.imagen}" alt="">
+                                    
                                     </div>
                                     `
         productosEnCarrito.appendChild(elementoAñadido);
@@ -283,13 +285,16 @@ function eliminarCarrito(id){
         elementoAñadido.className = "elementoAñadido";
         elementoAñadido.innerHTML = `
                                     <div>
+                                    <h5 class= "cantidad">${producto.cantidad}</h5>
                                     <h3>${producto.nombre}</h3>
                                     <h4>${producto.precio}$</h4>
-                                    <h5>Cantidad: ${producto.cantidad}</h5>
-                                    <button class="boton1" onclick="eliminarCarrito(${producto.id})">Eliminar</button>
+                                    <i class='bx bxs-trash' style='color:#ffffff' onclick="eliminarCarrito(${producto.id})" ></i>
+                                    
                                     </div>
                                     <div>
+                                    
                                     <img class="imgCarrito" src="${producto.imagen}" alt="">
+                                    
                                     </div>
                                     `
         productosEnCarrito.appendChild(elementoAñadido);
