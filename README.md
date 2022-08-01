@@ -1,6 +1,6 @@
-### Ecommerce
+### MultiMarc
 
-- [Ecommerce](https://nasanchez7.github.io/ecommerce/ "MyFilms") es un proyecto creado como proyecto final para el curso de JavaScript de Coder House, actualmente sigue en desarrollo.
+- [MultiMarc](https://nasanchez7.github.io/ecommerce/ "Ecommerce") es un proyecto creado como proyecto final para el curso de JavaScript de Coder House, actualmente sigue en desarrollo.
 
 ## Objetivo
 
